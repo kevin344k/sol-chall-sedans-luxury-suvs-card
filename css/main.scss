@@ -1,0 +1,130 @@
+/*colours*/
+$Bright_orange: hsl(31, 77%, 52%);
+$Dark_cyan: hsl(184, 100%, 22%);
+$Very_dark_cyan: hsl(179, 100%, 13%);
+
+$Transparent_white_paragraphs: hsla(0, 0%, 100%, 0.75);
+$Very_light_gray_background: hsl(0, 0%, 95%);
+/*fonts*/
+$font_BigSh: 'Big Shoulders Display', cursive;
+$font_Lexend: 'Lexend Deca', sans-serif;
+$font_size:1.5rem;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+}
+main{
+    width: 100%;
+    height: 100vh;
+
+
+section{
+    width: 80%;
+    max-width: 375px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    padding: 40px 10px;
+    
+    align-items: center;
+    .section-div--sedans{
+        display: flex;
+        flex-direction: column;
+        background-color: $Bright_orange;
+        padding: 30px;
+        border-radius: 8px 8px 0 0  ;
+        img{
+            width: 60px;
+            height: 40px;
+            margin-bottom:20px ;
+        }
+        span{
+            font-family: $font_BigSh;
+            font-size: 3rem;
+            font-weight: bold;
+            color: white;
+            letter-spacing: 1px;
+            margin-bottom:20px ;
+        }
+        p{
+            font-size: 1.5rem;
+            color: $Transparent_white_paragraphs;
+            font-family: $font_Lexend;
+            font-weight: 400;
+            margin-bottom:20px ;
+            line-height: 25px;
+        }
+        button{
+            background-color: white;
+            width: 150px;
+            border: none;
+            border-style: none;
+            padding: 12px;
+            color: $Bright_orange;
+            font-family: $font_Lexend;
+            border-radius: 20px;
+            border: 1px solid white
+        }
+        button:hover{
+            background-color: transparent;
+            color: white;
+            border: 1px solid white
+        }
+    }
+    .section-div--suvs{
+        @extend .section-div--sedans;
+        background-color: $Dark_cyan;
+        border-radius: 0;
+        button{
+            color:$Dark_cyan;
+        }
+    }
+    .section-div--luxury{
+        @extend .section-div--sedans;
+        background-color: $Very_dark_cyan;
+        border-radius: 0 0 8px 8px;
+        button{
+            color:$Very_dark_cyan;
+        }
+    }
+
+
+
+}
+}
+@media (min-width:1440px){
+main{
+    margin: auto;
+    display: flex;
+    section{
+        flex-direction: row;
+        width: 60%;
+       max-width: none;
+        .section-div--sedans{
+            border-radius: 20px 0 0 20px;
+            p{
+                margin-bottom: 70px;
+            }
+            button{
+                margin-bottom: 30px
+            }
+        }
+        .section-div--suvs{
+            @extend .section-div--sedans;
+            border-radius: 0;
+        }
+        .section-div--luxury{
+            @extend .section-div--sedans;
+            border-radius: 0 20px 20px 0;
+        }
+
+
+    }
+}
+}

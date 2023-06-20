@@ -1,0 +1,111 @@
+/*colours*/
+/*fonts*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+}
+main section {
+  width: 80%;
+  max-width: 375px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 40px 10px;
+  align-items: center;
+}
+main section .section-div--sedans, main section .section-div--luxury, main section .section-div--suvs {
+  display: flex;
+  flex-direction: column;
+  background-color: hsl(31, 77%, 52%);
+  padding: 30px;
+  border-radius: 8px 8px 0 0;
+}
+main section .section-div--sedans img, main section .section-div--luxury img, main section .section-div--suvs img {
+  width: 60px;
+  height: 40px;
+  margin-bottom: 20px;
+}
+main section .section-div--sedans span, main section .section-div--luxury span, main section .section-div--suvs span {
+  font-family: "Big Shoulders Display", cursive;
+  font-size: 3rem;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+main section .section-div--sedans p, main section .section-div--luxury p, main section .section-div--suvs p {
+  font-size: 1.5rem;
+  color: hsla(0, 0%, 100%, 0.75);
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 400;
+  margin-bottom: 20px;
+  line-height: 25px;
+}
+main section .section-div--sedans button, main section .section-div--luxury button, main section .section-div--suvs button {
+  background-color: white;
+  width: 150px;
+  border: none;
+  border-style: none;
+  padding: 12px;
+  color: hsl(31, 77%, 52%);
+  font-family: "Lexend Deca", sans-serif;
+  border-radius: 20px;
+  border: 1px solid white;
+}
+main section .section-div--sedans button:hover, main section .section-div--luxury button:hover, main section .section-div--suvs button:hover {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+}
+main section .section-div--suvs {
+  background-color: hsl(184, 100%, 22%);
+  border-radius: 0;
+}
+main section .section-div--suvs button {
+  color: hsl(184, 100%, 22%);
+}
+main section .section-div--luxury {
+  background-color: hsl(179, 100%, 13%);
+  border-radius: 0 0 8px 8px;
+}
+main section .section-div--luxury button {
+  color: hsl(179, 100%, 13%);
+}
+
+@media (min-width: 1440px) {
+  main {
+    margin: auto;
+    display: flex;
+  }
+  main section {
+    flex-direction: row;
+    width: 60%;
+    max-width: none;
+  }
+  main section .section-div--sedans, main section .section-div--suvs, main section .section-div--luxury {
+    border-radius: 20px 0 0 20px;
+  }
+  main section .section-div--sedans p, main section .section-div--suvs p, main section .section-div--luxury p {
+    margin-bottom: 70px;
+  }
+  main section .section-div--sedans button, main section .section-div--suvs button, main section .section-div--luxury button {
+    margin-bottom: 30px;
+  }
+  main section .section-div--suvs {
+    border-radius: 0;
+  }
+  main section .section-div--luxury {
+    border-radius: 0 20px 20px 0;
+  }
+}/*# sourceMappingURL=main.css.map */
